@@ -1,0 +1,21 @@
+web/config/database.php
+# Dépendances (se réinstallent avec composer install)
+web/vendor/
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# Secrets et configuration locale
+.env
+web/config/database.php
+
+# Fichiers générés / uploadés
+web/uploads/
+*.log
+.DS_Store
+
+# Fichiers de lancement local (run.sh)
+.run-logs/
+.run-pids/

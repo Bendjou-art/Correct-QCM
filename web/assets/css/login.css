@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700;800&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(105, 14, 224, 0.12) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(105, 14, 224, 0.08) 0%, transparent 50%),
+    #0f1117;
+  padding: 20px;
+}
+
+.login-box {
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+  width: 460px;
+  max-width: 100%;
+  padding: 48px 44px;
+  background: #161825;
+  border-radius: 24px;
+  box-shadow:
+    0 30px 60px -15px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.06),
+    inset 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+.login-header {
+  text-align: left;
+  margin: 0 0 6px 0;
+}
+.login-header header {
+  color: #ffffff;
+  font-size: 34px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+.login-header::after {
+  content: "Accédez à votre espace de correction automatique";
+  display: block;
+  color: #7c7f94;
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 6px;
+  margin-bottom: 28px;
+}
+
+/* SWITCH RÔLE */
+.role-switch {
+  display: flex;
+  background: #0f1117;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 5px;
+  margin-bottom: 28px;
+}
+.role-btn {
+  flex: 1;
+  padding: 12px 0;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #7c7f94;
+  cursor: pointer;
+  transition: all .25s ease;
+  letter-spacing: 0.2px;
+}
+.role-btn:hover:not(.active) { color: #c4c6d6; }
+.role-btn.active {
+  background: linear-gradient(135deg, #8b2be2, #690ee0);
+  color: #fff;
+  box-shadow: 0 8px 20px -6px rgba(105, 14, 224, 0.6);
+}
+
+.input-box { margin-bottom: 18px; }
+
+.input-field {
+  width: 100%;
+  height: 52px;
+  font-size: 15px;
+  padding: 0 20px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #0f1117;
+  color: #f0f0f5;
+  outline: none;
+  transition: all .25s ease;
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+::placeholder {
+  font-weight: 500;
+  color: #5c5f72;
+}
+
+.input-field:focus {
+  border-color: #8b2be2;
+  box-shadow: 0 0 0 4px rgba(139, 43, 226, 0.15);
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 28px;
+  margin-top: 4px;
+}
+section {
+  display: flex;
+  align-items: center;
+  font-size: 13.5px;
+  color: #a4a7ba;
+}
+#check {
+  margin-right: 10px;
+  accent-color: #8b2be2;
+  width: 15px;
+  height: 15px;
+}
+a {
+  text-decoration: none;
+  color: #a4a7ba;
+  font-weight: 600;
+  transition: color .2s;
+}
+a:hover { color: #b768f0; }
+
+.error-msg {
+  color: #ff6b6b;
+  font-size: 13.5px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  min-height: 16px;
+}
+
+.input-submit { margin-top: 4px; }
+
+.submit-btn {
+  width: 100%;
+  height: 54px;
+  background: linear-gradient(135deg, #8b2be2, #690ee0);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  letter-spacing: 0.3px;
+  box-shadow: 0 12px 24px -8px rgba(105, 14, 224, 0.55);
+  transition: all .25s ease;
+}
+.submit-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 30px -8px rgba(105, 14, 224, 0.7);
+}
+.submit-btn:active:not(:disabled) { transform: translateY(0); }
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.sign-up-link {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 28px;
+  color: #7c7f94;
+}
+.sign-up-link a {
+  color: #b768f0;
+  font-weight: 700;
+}
+
+@media (max-width: 500px) {
+  .login-box { padding: 36px 26px; border-radius: 20px; }
+  .login-header header { font-size: 28px; }
+}

@@ -1,0 +1,107 @@
+.page-title { font-size: 1.4rem; font-weight: 800; margin-bottom: 2px; }
+.page-sub { font-size: 0.85rem; color: var(--muted); }
+
+/* PANEL renforcé */
+.panel {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 8px 20px 20px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+  overflow-x: auto;
+}
+
+/* TABLEAU COPIES renforcé */
+#copies-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.86rem;
+}
+#copies-table thead tr {
+  border-bottom: 2px solid var(--border);
+}
+#copies-table th {
+  text-align: left;
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 14px 12px;
+  white-space: nowrap;
+}
+#copies-table td {
+  padding: 14px 12px;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+  white-space: nowrap;
+}
+#copies-table tbody tr {
+  transition: background 0.12s;
+}
+#copies-table tbody tr:nth-child(even) {
+  background: #FBFBFD;
+}
+#copies-table tbody tr:hover {
+  background: var(--purple-light);
+}
+#copies-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* Colonne "Copie" mise en avant */
+#copies-table td:first-child {
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* Colonne Note mise en valeur */
+.note-value {
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+.note-value.note-bonne { color: var(--green); }
+.note-value.note-moyenne { color: var(--yellow); }
+.note-value.note-faible { color: var(--red); }
+.note-empty { color: var(--muted); font-weight: 400; }
+
+/* Statuts */
+.badge { padding: 4px 10px; border-radius: 20px; font-size: 0.7rem; font-weight: 700; white-space: nowrap; }
+.badge-active { background: #E9FBF2; color: var(--green); }
+.badge-draft { background: #EAF2FF; color: var(--blue); }
+.badge-anomalie {
+  background: #FFEDE9;
+  color: var(--red);
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Bouton Voir */
+.icon-btn {
+  font-size: 0.78rem;
+  color: var(--purple);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 6px 14px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  display: inline-block;
+}
+.icon-btn:hover {
+  border-color: var(--purple);
+  background: var(--purple);
+  color: #fff;
+}
+
+.no-results {
+  text-align: center;
+  color: var(--muted);
+  padding: 30px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 900px) {
+  .toolbar { flex-direction: column; align-items: stretch; }
+  #copies-table { font-size: 0.8rem; }
+}
